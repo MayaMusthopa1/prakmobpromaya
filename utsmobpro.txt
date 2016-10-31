@@ -1,0 +1,113 @@
+1. tag xml untuk menampilkan gambar
+<ImageView android:id="+@id/tampil"  //ini id dari widgetnya
+ android:layout_width="fill_parent"  //setting lebar dari widget
+ android:layout_height="150dp" />    //setting tinggi dari widget
+
+2. android:layout_width, android:text dan android:src merupakan contoh dari TextView dan ImageView
+
+3. CameICase "i like practice sets the best"
+
+public class stringcame {
+
+    public static String stringcame(String s) {
+        if (s.length() == 0) return s;
+        return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
+    }
+
+   public static void main(String[] args) {
+        while (!StdIn.isEmpty()) {
+            String line = StdIn.readLine();
+            String[] words = line.split("\\s");
+            for (String s : words) {
+                StdOut.print(stringcame(s) + " ");
+            }
+            StdOut.println();
+        }
+    }
+
+}
+String strCamelCase  = "i like practice sets the best".substring(0, 1).toUpperCase()+ "i like practice sets the best".substring(1).toLowerCase();
+System.out.println(strCamelCase); 
+
+4. RelativeLayout dan LinearLayout disebut juga dengan layout yang horizontal dan vertical
+   LinearLayout disebut juga dengan layout yang fleksibel
+
+5. .......... (Isi sesuai dengan layout)
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+<Button
+android:id="@+id/lyla_text_view"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"(Isi sesuai dengan layout)
+android:layout_gravity="center_horizontal"(Isi sesuai dengan layout)
+android:textSize="24sp"
+android:text="Click Me" />
+</RelativeLayout>
+
+6. Analisis Kode
+//file layout yang terdapat pada folder res/layout yang direferensikan bagi aplikasi ketika membangun interfacenya.
+(1) <LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+<TextView
+android:text="Ukuran 1"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:textColor="@android:color/white"
+android:textSize="54sp"
+android:background="#009688" /> //warna teal
+<TextView
+android:text="Ukuran 2"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:textColor="@android:color/white"
+android:textSize="54sp"
+android:background="#009688" />
+<TextView
+android:text="Ukuran 3"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:textColor="@android:color/white"
+android:textSize="34sp"
+android:background="#009688" />
+</LinearLayout>
+
+(2) <LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+<TextView
+android:text="1"
+android:layout_width="0dp"
+android:layout_height="match_parent"
+android:layout_weight="1"
+android:textColor="@android:color/white"
+android:textSize="54sp"
+android:background="#009688" />
+<TextView
+android:text="2"
+android:layout_width="0dp"
+android:layout_height="match_parent"
+
+android:layout_weight="1"
+android:textColor="@android:color/white"
+android:textSize="54sp"
+android:background="#009688" />
+<TextView
+android:text="3"
+android:layout_width="0dp"
+android:layout_height="match_parent"
+android:layout_weight="1"
+android:textColor="@android:color/white"
+android:textSize="54sp"
+android:background="#009688" />
+</LinearLayout>
